@@ -39,6 +39,7 @@ bot.on("message", async message => {
     let messageArray = message.content.split(" ")
     let cmd = messageArray[0].toLowerCase();
     let args = messageArray.slice(1);
+    const token = process.env.token;
 
 
     if(!message.content.startsWith(prefix)) return;
@@ -52,4 +53,4 @@ bot.on("message", async message => {
 
 })
 
-bot.login(botconfig.token);
+client.login(token).catch(err => console.log(err));
