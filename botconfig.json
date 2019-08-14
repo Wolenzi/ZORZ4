@@ -1,4 +1,4 @@
 {
-    "token": "brak",
+    "token": "process.env.token",
     "prefix": "!"
 }
