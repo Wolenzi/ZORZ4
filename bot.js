@@ -53,4 +53,4 @@ bot.on("message", async message => {
 
 })
 
-client.login(process.env.token)
+client.login(process.env.token).catch(err => console.log(err));
