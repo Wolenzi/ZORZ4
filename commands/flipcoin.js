@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const colours = require("../colours.json");
 
 module.exports.run = async (bot, message, args) => {
-    if(!args[0]) return message.reply("Proszę rzucić!");
+    if(!args[0]) return message.reply("Proszę wybrać: ``Orzeł`` lub ``Reszka``!");
     let replies = ["Orzeł.", "Reszka."];
 
     let result = Math.floor((Math.random() * replies.length));
@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
 
     let flipembed = new Discord.RichEmbed()
     .setAuthor(message.author.tag)
-    .setColor("lime")
+    .setColor(colours.light_blue)
     .addField("Obstawiłeś", question)
     .addField("Rezultat", replies[result]);
 
