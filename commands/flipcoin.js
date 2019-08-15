@@ -7,16 +7,14 @@ module.exports.run = async (bot, message, args) => {
 
     let result = Math.floor((Math.random() * replies.length));
     let question = args.slice(0).join(" ");
-    if(!args[0]) return message.channel.send("oof.");
-    message.channel.bulkDelete(args[0]).then(() => {
-        let flipembed = new Discord.RichEmbed()
-            .setAuthor(message.author.tag)
-            .setColor(colours.light_blue)
-            .addField("Obstawiłeś", question)
-            .addField("Rezultat", replies[result]);
 
-        message.channel.send(flipembed);
-    })
+    let flipembed = new Discord.RichEmbed()
+    .setAuthor(message.author.tag)
+    .setColor(colours.money_green)
+    .addField("Obstawiłeś", question)
+    .addField("Rezultat", replies[result]);
+
+    message.channel.send(flipembed);
 }
 
 module.exports.config = {
