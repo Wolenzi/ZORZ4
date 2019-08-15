@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const colours = require("../colours.json");
 
 module.exports.run = async (bot, message, args) => {
-    if(!args[2]) return message.reply("Proszę zadać pytanie!");
+    if(!args[1]) return message.reply("Proszę zadać pytanie!");
     let replies = ["Tak.", "Nie.", "Nie mam pojęcia.", "Zapytaj mnie później."];
 
     let result = Math.floor((Math.random() * replies.length));
@@ -19,5 +19,5 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: "8ball",
-    aliases: ["si", "pytanie"]
+    aliases: ["si", "pyt"]
 }
