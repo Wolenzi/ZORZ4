@@ -5,7 +5,7 @@ const colours = require("../colours.json");
 module.exports.run = async (bot, message, args) => {
     
     let siemaEmbed = new Discord.RichEmbed()
-        .setTitle(`Siema **${message.author}**`)
+        .setTitle(`Siema **${message.author.username}**`)
         .setColor(colours.lime)
     return message.channel.send(siemaEmbed);
 
