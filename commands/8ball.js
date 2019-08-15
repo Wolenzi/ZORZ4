@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
 
     let ballembed = new Discord.RichEmbed()
     .setAuthor(message.author.tag)
-    .setColor("light_blue")
+    .setColor(colours.lime)
     .addField("Pytanie", question)
     .addField("Odpowiedź", replies[result]);
 
