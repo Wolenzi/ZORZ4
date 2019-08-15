@@ -1,23 +1,22 @@
 const Discord = require("discord.js");
-const botconfig = require("../botconfig.json");
 const colours = require("../colours.json");
 
 module.exports.run = async (bot, message, args) => {
+    if(!args[2]) return message.reply("Proszę rzucić!");
+    let replies = ["Orzeł.", "Reszka."];
 
-    if (args === "heads" || args === "tails"){
-        if(args != coins) {
-            message.channel.send("przegrana");
-        }
-        else {
-            message.channel.send("wygrana");
-        }
-    } 
-    else {
-        message.channel.send("błąd");
-    }
+    let result = Math.floor((Math.random() * replies.length));
+    let question = args.slice(0).join(" ");
+
+    let flipembed = new Discord.RichEmbed()
+    .setAuthor(message.author.tag)
+    .setColor("gold")
+    .addField("Rezultat", replies[result]);
+
+    message.channel.send(flipembed);
 }
 
 module.exports.config = {
     name: "flipcoin",
-    aliases: ["si", "moneta"]
+    aliases: ["si", "rzut"]
 }
