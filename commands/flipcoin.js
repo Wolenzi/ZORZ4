@@ -6,10 +6,12 @@ module.exports.run = async (bot, message, args) => {
     let replies = ["Orzeł.", "Reszka."];
 
     let result = Math.floor((Math.random() * replies.length));
+    let question = args.slice(1).join(" ");
 
     let flipembed = new Discord.RichEmbed()
     .setAuthor(message.author.tag)
     .setColor("gold")
+    .addField("Rezultat", question)
     .addField("Rezultat", replies[result]);
 
     message.channel.send(flipembed);
