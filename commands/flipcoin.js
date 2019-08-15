@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const colours = require("../colours.json");
 
 module.exports.run = async (bot, message, args) => {
-    if(!args[2]) return message.reply("Proszę rzucić!");
+    if(!args[1]) return message.reply("Proszę rzucić!");
     let replies = ["Orzeł.", "Reszka.", "Moneta upadła na ziemię"];
 
     let result = Math.floor((Math.random() * replies.length));
