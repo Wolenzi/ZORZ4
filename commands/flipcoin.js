@@ -7,6 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
     let result = Math.floor((Math.random() * replies.length));
     let question = args.slice(0).join(" ");
+    if(!args[0]) return message.channel.send("oof.");
     message.channel.bulkDelete(args[0]).then(() => {
         let flipembed = new Discord.RichEmbed()
             .setAuthor(message.author.tag)
