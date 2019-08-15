@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     if(!args[0]) return message.channel.send("oof.");
     message.channel.bulkDelete(args[0]).then(() => {
         let cEmbed = new Discord.RichEmbed()
-            .setTitle(`✅**Usunięto ${args[0]} wiadomości**`)
+            .setTitle(`✅ **Usunięto ${args[0]} wiadomości**`)
             .setColor(colours.green)
 
         message.channel.send(cEmbed).then(msg => msg.delete(5000))
