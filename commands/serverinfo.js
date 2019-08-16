@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor(colours.purple)
     .setTitle("Informacje o serwerze")
     .setThumbnail(message.guild.iconURL)
-    .setAuthor(`Info ${message.guild.name}`, message.guild.iconURL)
+    .setAuthor(`Serwer ${message.guild.name}`, message.guild.iconURL)
     .addField("**Nazwa serwera:**", `${message.guild.name}`, true)
     .addField("**Twoja nazwa:**", `${message.guild.owner}`, true)
     .addField("**Użytkownicy**:", `${message.guild.memberCount}`, true)
