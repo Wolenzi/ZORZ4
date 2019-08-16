@@ -5,9 +5,9 @@ module.exports.run = async (bot, message, args) => {
     let roll = Math.floor(Math.random() * 6) + 1;
 
     let diceembed = new Discord.RichEmbed()
-    .setAuthor(message.author.tag)
+    .setAuthor(message.author.tag, message.author.avatarURL)
     .setColor(colours.money_green)
-    .addField("Wypadło" + roll)
+    .addField("Wypadło", roll)
 
     message.channel.send(diceembed);
 }
