@@ -4,8 +4,8 @@ const colours = require("../colours.json");
 
 module.exports.run = async (bot, message, args) => {
 
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.replay("oof.");
-    if(!args[0]) return message.channel.send("oof.");
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.replay("Wybierz liczbę od 1 wzwyż.");
+    if(!args[0]) return message.reply("Podana liczba nie moze być 0.");
     message.channel.bulkDelete(args[0]).then(() => {
         let cEmbed = new Discord.RichEmbed()
             .setTitle(`✅ **Usunięto ${args[0]} wiadomości**`)
