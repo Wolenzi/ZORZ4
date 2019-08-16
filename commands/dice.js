@@ -2,19 +2,14 @@ const Discord = require("discord.js");
 const colours = require("../colours.json");
 
 module.exports.run = async (bot, message, args) => {
-    if(!args[0]) return message.reply("Błąd");
-    let replies = ["Wypadło 1 oczko.", "Wypadły 2 oczka.","Wypadły 3 oczka.","Wypadły 4 oczka.","Wypadło 5 oczek.","Wypadło  oczek."];
+    let roll = Math.floor(Math.random() * 6) + 1;
 
-    let result = Math.floor((Math.random() * replies.length));
-    let question = args.slice(0).join(" ");
-
-    let flipembed = new Discord.RichEmbed()
+    let diceembed = new Discord.RichEmbed()
     .setAuthor(message.author.tag)
     .setColor(colours.money_green)
-    .addField("Obstawiłeś", question)
-    .addField("Rezultat", replies[result]);
+    .addField("Wypadło" + roll)
 
-    message.channel.send(flipembed);
+    message.channel.send(diceembed);
 }
 
 module.exports.config = {
