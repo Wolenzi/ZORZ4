@@ -5,9 +5,9 @@ const colours = require("../colours.json")
 module.exports.run = async (bot, message, args) => {
     let sEmbed = new Discord.RichEmbed()
     .setColor(colours.purple)
-    .setTitle("Server Info")
+    .setTitle("Serwer Info")
     .setThumbnail(message.guild.iconURL)
-    .setAuthor(`${message.guild.name} Info`, message.guild.iconURL)
+    .setAuthor(`Info ${message.guild.name}`, message.guild.iconURL)
     .addField("**Nazwa serwera:**", `${message.guild.name}`, true)
     .addField("**Twoja nazwa:**", `${message.guild.owner}`, true)
     .addField("**Użytkownicy**:", `${message.guild.memberCount}`, true)
@@ -19,6 +19,6 @@ module.exports.run = async (bot, message, args) => {
 
 
 module.exports.config = {
-    name: "serverinfo",
-    aliases: ["si", "serverdesc"]
+    name: "serwer",
+    aliases: ["si", "serwerinfo"]
 }
