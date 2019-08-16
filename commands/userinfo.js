@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor(colours.blue)
     .setTitle("User Info")
     .setThumbnail(message.author.avatarURL)
-    .setDescription(`${message.author} Info`, message.author.defaultAvatarURL)
+    .setDescription(`Info ${message.author}`, message.author.defaultAvatarURL)
     .addField("**Nazwa:**", `${message.author.username}`, true)
     .addField("**Tag:**", `${message.author.discriminator}`, true)
     .addField("**ID:**", `${message.author.id}`, true)
@@ -19,6 +19,6 @@ module.exports.run = async (bot, message, args) => {
 
 
 module.exports.config = {
-    name: "userinfo",
-    aliases: ["si", "userdesc"]
+    name: "dokument",
+    aliases: ["si", "userinfo"]
 }
