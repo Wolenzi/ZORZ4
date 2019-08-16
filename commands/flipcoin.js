@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     let question = args.slice(0).join(" ");
 
     let flipembed = new Discord.RichEmbed()
-    .setAuthor(message.author.tag)
+    .setAuthor(message.author.tag, message.author.defaultAvatarURL)
     .setColor(colours.money_green)
     .addField("Obstawiłeś", question)
     .addField("Rezultat", replies[result]);
