@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     let diceembed = new Discord.RichEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL)
     .setColor(colours.money_green)
-    .addField(`${replies[roll]}`)
+    .addField("Rezultat:", replies[roll])
 
     message.channel.send(diceembed);
 }
