@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     let roll = Math.floor((Math.random() * replies.length));
 
     let diceembed = new Discord.RichEmbed()
-    .setAuthor(message.author.tag, message.author.avatarURL)
+    .setAuthor(message.reply, message.author.avatarURL)
     .setColor(colours.money_green)
     .addField("Rezultat:", replies[roll])
 
