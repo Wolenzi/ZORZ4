@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor(colours.blue)
     .setTitle("User Info")
     .setThumbnail(message.author.avatarURL)
-    .setAuthor(`${message.author} Info`, message.author.defaultAvatarURL)
+    .setDescription(`${message.author} Info`, message.author.defaultAvatarURL)
     .addField("**Nazwa:**", `${message.author.username}`, true)
     .addField("**Tag:**", `${message.author.discriminator}`, true)
     .addField("**ID:**", `${message.author.id}`, true)
