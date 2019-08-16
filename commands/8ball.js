@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     let question = args.slice(0).join(" ");
 
     let ballembed = new Discord.RichEmbed()
-    .setAuthor(message.author.tag)
+    .setAuthor(message.author.tag, message.author.avatarURL)
     .setColor(colours.light_blue)
     .addField("Pytanie", question)
     .addField("Odpowiedź", replies[result]);
