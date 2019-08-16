@@ -5,7 +5,7 @@ const colours = require("../colours.json")
 module.exports.run = async (bot, message, args) => {
     let sEmbed = new Discord.RichEmbed()
     .setColor(colours.purple)
-    .setTitle("Serwer Info")
+    .setTitle("Informacje o serwerze")
     .setThumbnail(message.guild.iconURL)
     .setAuthor(`Info ${message.guild.name}`, message.guild.iconURL)
     .addField("**Nazwa serwera:**", `${message.guild.name}`, true)
