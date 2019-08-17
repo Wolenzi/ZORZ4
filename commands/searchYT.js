@@ -49,5 +49,5 @@ module.exports.run = async (bot, message, args, ops) => {
 
 module.exports.config = {
     name: "searchyt",
-    aliases: ["si", "szukajyt"]
+    aliases: ["sy", "szukajyt"]
 }
