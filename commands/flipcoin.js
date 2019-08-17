@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const colours = require("../colours.json");
 
 module.exports.run = async (bot, message, args) => {
+    message.delete(1);
     if(!args[0]) return message.reply("Proszę wybrać: ``Orzeł`` lub ``Reszka``!");
     let replies = ["Orzeł.", "Reszka."];
 
