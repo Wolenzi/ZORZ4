@@ -3,7 +3,7 @@ const botconfig = require("../botconfig.json");
 const colours = require("../colours.json");
 
 module.exports.run = async (bot, message, args) => {
-
+    message.delete(1);
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.replay("oof");
     if(!args[0]) return message.reply("Wybierz liczbę od 1 wzwyż.");
     message.channel.bulkDelete(args[0]).then(() => {
