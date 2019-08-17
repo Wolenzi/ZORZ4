@@ -8,6 +8,7 @@ module.exports = bot => {
     let statues = [
         `Jestem na ${bot.guilds.size} serwerach!`,
         "Grubego",
+        "!siema",
         `Ponad ${bot.users.size} użytkowników!`
     ]
 
