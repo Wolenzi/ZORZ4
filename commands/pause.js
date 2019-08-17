@@ -43,5 +43,5 @@ module.exports.run = async (bot, message, args, ops) => {
 
 module.exports.config = {
     name: "pause",
-    aliases: ["si", "pauza"]
+    aliases: ["pa", "pauza"]
 }
