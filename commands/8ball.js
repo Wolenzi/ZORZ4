@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const colours = require("../colours.json");
 
 module.exports.run = async (bot, message, args) => {
+    message.delete(1);
     if(!args[2]) return message.reply("Proszę zadać pytanie!");
     let replies = ["Tak.", "Nie.", "Nie mam pojęcia.", "Zapytaj mnie później."];
 
