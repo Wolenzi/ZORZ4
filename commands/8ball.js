@@ -20,5 +20,5 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: "8ball",
-    aliases: ["si", "pyt"]
+    aliases: ["8b", "pyt"]
 }
