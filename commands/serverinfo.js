@@ -3,6 +3,7 @@ const botconfig = require("../botconfig.json");
 const colours = require("../colours.json")
 
 module.exports.run = async (bot, message, args) => {
+    message.delete(1);
     let sEmbed = new Discord.RichEmbed()
     .setColor(colours.purple)
     .setTitle("Informacje o serwerze")
