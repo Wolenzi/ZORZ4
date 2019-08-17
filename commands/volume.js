@@ -42,5 +42,5 @@ module.exports.run = async (bot, message, args, ops) => {
 
 module.exports.config = {
     name: "volume",
-    aliases: ["si", "głośność"]
+    aliases: ["vo", "głośność"]
 }
