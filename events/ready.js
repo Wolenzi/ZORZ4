@@ -5,7 +5,7 @@ module.exports = bot => {
     console.log(`${bot.user.username} jest online`)
 
     let statues = [
-        `${bot.guids.size}!`,
+        `${bot.guilds.size}!`,
         "!siema",
         `Ponad ${bot.users.size} użytkowników!`
     ]
