@@ -116,5 +116,5 @@ function Finish(bot, ops, dispatcher) {
  
 module.exports.config = {
     name: "play",
-    aliases: ["si", "graj"]
+    aliases: ["pl", "graj"]
 }
