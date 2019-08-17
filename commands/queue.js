@@ -30,5 +30,5 @@ module.exports.run = async (bot, message, args, ops) => {
  
 module.exports.config = {
     name: "queue",
-    aliases: ["si", "kolejka"]
+    aliases: ["qu", "kolejka"]
 }
