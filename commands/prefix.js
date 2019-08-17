@@ -19,8 +19,8 @@ module.exports.run = async (bot, message, args, prefix) => {
     });
 
     let pEmbed = new Discord.RichEmbed()
-    .setColor(colours.purple)
-    .setTitle("Prefix Ustawiony!")
+    .setColor(colours.green)
+    .setTitle("✅Prefix Ustawiony!")
     .setDescription(`Ustawiono na ${args[0]}`);
 
     message.channel.send(pEmbed);
