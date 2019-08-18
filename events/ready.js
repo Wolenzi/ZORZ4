@@ -15,6 +15,7 @@ module.exports = bot => {
     setInterval(function() {
         let status = statues[Math.floor(Math.random() * statues.length)];
         bot.user.setActivity(status, {type: "WATCHING"});
+        bot.user.setStatus(`away`);
 
     }, 5000)
 }
