@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("Informacje o użytkowniku")
     .setThumbnail(message.author.avatarURL)
     .setAuthor(`Użytkownik ${message.author.username}`, message.author.defaultAvatarURL)
-    .addField("**Nazwa:**", `${message.guild.owner}`, true)
+    .addField("**Nazwa:**", `${message.author}`, true)
     .addField("**Tag:**", `${message.author.discriminator}`, true)
     .addField("**ID:**", `${message.author.id}`, true)
     .addField("**Status:**", `${message.author.presence.status}`, true)
