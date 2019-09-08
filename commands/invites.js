@@ -4,7 +4,7 @@ const Discord = require("discord.js"),
     send = require('quick.hook');
 
 module.exports.run = async (bot, message, args, tools) => {
-    let invites = await message.guid.fetchInvites().catch(error => {
+    let invites = await message.guild.fetchInvites().catch(error => {
         return message.channel.send('Przepraszam, nie masz uprawnień do użycia tej komendy.');
     })
 
