@@ -1,5 +1,5 @@
-const Discord = require("discord.js"),
-const colours = require("../colours.json"),
+const Discord = require("discord.js");
+const colours = require("../colours.json");
     arraySort = require('array-sort'),
     table = require('table'),
     send = require('quick.hook');
