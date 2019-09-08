@@ -63,7 +63,7 @@ bot.on("message", async message => {
 
 bot.on("guildMemberAdd", (member) => {
     console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
-    member.guild.channels.find(c => c.name === "welcome").send(`"${member.user.username}" has joined this server`);
+    member.guild.channels.find(c => c.name === "👋powitalnia").send(`"${member.user.username}" has joined this server`);
 });
 
 bot.login(process.env.token).catch(err => console.log(err));
