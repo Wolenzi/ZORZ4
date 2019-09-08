@@ -18,11 +18,11 @@ module.exports.run = async (bot, message, args, tools) => {
         possibleInvites.push([invite.inviter.username, invite.uses]);
     })
 
-    let iembed = new Discord.RichEmbed()
-    .setColor(colours.gold)
-    .addField('Tabela Zaproszonych',`\`${table.table(possibleInvites)}\``);
+    //let iembed = new Discord.RichEmbed()
+    //.setColor(colours.gold)
+    //.addField('Tabela Zaproszonych',`\`${table.table(possibleInvites)}\``);
 
-    message.channel.send(iembed);
+    message.channel.send('Tabela Zaproszonych',`\`${table.table(possibleInvites)}\``);
 
 }
 
