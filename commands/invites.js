@@ -22,7 +22,9 @@ module.exports.run = async (bot, message, args, tools) => {
         .setColor(colours.gold)
         .setTitle('Server Invites')
         .addField('TOP', `\`\`\`${table.table(possibleInvites)}\`\`\``);
-    message.channel.send(embed);    
+    send(message.channel, embed, {
+        name: 'Serwer Invites'
+    })   
 
 }
 
