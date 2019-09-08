@@ -1,4 +1,5 @@
 const Discord = require("discord.js"),
+const colours = require("../colours.json"),
     arraySort = require('array-sort'),
     table = require('table'),
     send = require('quick.hook');
@@ -18,7 +19,7 @@ module.exports.run = async (bot, message, args, tools) => {
     })
 
     let iembed = new Discord.RichEmbed()
-    .setColor(fffb00)
+    .setColor(colours.gold)
     .addField('TOP', `\`\`\`${table.table(possibleInvites)}\`\`\``);
 
     message.channel.send(iembed);
