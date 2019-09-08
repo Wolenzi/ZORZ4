@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args, tools) => {
 
     arraySort(invites, 'uses', { reverse: true });
 
-    let possibleInvites = [['User', 'Users']];
+    let possibleInvites = [['User', 'Uses']];
     invites.forEach(function(invite) {
         possibleInvites.push([invite.inviter.username, invite.uses]);
     })
@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args, tools) => {
         .addField('TOP', `\`\`\`${table.table(possibleInvites)}\`\`\``);
     send(message.channel, embed, {
         name: 'Serwer Invites'
-    })   
+    });   
 
 }
 
