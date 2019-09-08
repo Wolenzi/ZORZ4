@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 const colours = require("../colours.json");
 
-module.exports("guildMemberAdd", member => {
+module.exports = bot => {
     const channel = member.guild.channels.find("👋powitalnia");
     if (!channel) console.log("Ten kanał nie istnieje");
 
@@ -12,4 +12,4 @@ module.exports("guildMemberAdd", member => {
         .setTimestamp()
         .setFooter(`WolziBot | Footer`, bot.user.displayAvatarURL);
     channel.send(joinMessage);    
-});
+}
