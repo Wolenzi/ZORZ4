@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args, tools) => {
 
     let possibleInvites = [['User', 'Uses']];
     invites.forEach(function(invite) {
-        possibleInvites.push([invite.inviter.username, invite.uses]);
+        possibleInvites.push([invite.inviter.username, invite.username]);
     })
 
     let iembed = new Discord.RichEmbed()
