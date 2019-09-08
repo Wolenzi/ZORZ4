@@ -17,12 +17,11 @@ module.exports.run = async (bot, message, args, tools) => {
         possibleInvites.push([invite.inviter.username, invite.uses]);
     })
 
-    const embed = new Discord.MessageEmbed()
-        .setColor(fffb00)
-        .addField('TOP', `\`\`\`${table.table(possibleInvites)}\`\`\``);
-    send(message.channel, embed, {
-        name: 'Serwer Invites'
-    });   
+    let iembed = new Discord.RichEmbed()
+    .setColor(fffb00)
+    .addField('TOP', `\`\`\`${table.table(possibleInvites)}\`\`\``);
+
+    message.channel.send(iembed);
 
 }
 
