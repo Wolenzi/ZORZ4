@@ -61,17 +61,9 @@ bot.on("message", async message => {
 
 })
 
-bot.on("guildMemberAdd", (member) => {
-    const channel = member.guild.channels.find("👋powitalnia");
-    if (!channel) console.log("Ten kanał nie istnieje");
-
-    var joinMessage = new discord.RichEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setDescription(`Ooo ${member.user.username}, **Witaj na serwerze**`)
-        .setColor(colours.purple)
-        .setTimestamp()
-        .setFooter(`WolziBot | Footer`, bot.user.displayAvatarURL);
-    channel.send(joinMessage);
+client.on("guildMemberAdd", (member) => {
+    console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
+    member.guild.channels.find(c => c.name === "welcome").send(`"${member.user.username}" has joined this server`);
 });
 
 bot.login(process.env.token).catch(err => console.log(err));
