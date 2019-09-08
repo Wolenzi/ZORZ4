@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args, tools) => {
 
     let iembed = new Discord.RichEmbed()
     .setColor(colours.gold)
-    .addField('TOP', `\`\`\`${table.table(possibleInvites)}\`\`\`` );
+    .addField('TOP', `\`\`\`${table.table(possibleInvites)} \`\`\``);
 
     message.channel.send(iembed);
 
