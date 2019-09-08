@@ -13,14 +13,14 @@ module.exports.run = async (bot, message, args, tools) => {
 
     arraySort(invites, 'uses', { reverse: true });
 
-    let possibleInvites = [['User', 'Uses']];
+    let possibleInvites = [['Zaprosił', 'Liczba zaproszonych osób']];
     invites.forEach(function(invite) {
         possibleInvites.push([invite.inviter.username, invite.uses]);
     })
 
     let iembed = new Discord.RichEmbed()
     .setColor(colours.gold)
-    .addField('TOP', `\`\`\` ${table.table(possibleInvites)} \`\`\``);
+    .addField('Tabela Zaproszonych',`\`\`${table.table(possibleInvites)}\`\``);
 
     message.channel.send(iembed);
 
