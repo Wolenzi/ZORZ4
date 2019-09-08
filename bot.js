@@ -61,8 +61,4 @@ bot.on("message", async message => {
 
 })
 
-bot.on("guildMemberAdd", (member) => {
-    member.guild.channels.find(c => c.name === "👋powitalnia").send(`"${member.user.username}" dołączył z zaproszenia "**${inviterName}**" (**${numInvites}** zaproszeń)`);
-});
-
 bot.login(process.env.token).catch(err => console.log(err));
