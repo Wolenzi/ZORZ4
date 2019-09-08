@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args, tools) => {
     //.setColor(colours.gold)
     //.addField('Tabela Zaproszonych',`\`${table.table(possibleInvites)}\``);
 
-    message.channel.send('Tabela Zaproszonych',`\`${table.table(possibleInvites)}\``);
+    message.channel.reply('Tabela Zaproszonych',`\`${table.table(possibleInvites)}\``);
 
 }
 
