@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args, tools) => {
 
     let iembed = new Discord.RichEmbed()
     .setColor(colours.gold)
-    .addField('Tabela Zaproszonych',`\`${table.table(possibleInvites)}\`\``);
+    .addField('Tabela Zaproszonych',`\`${table.table(possibleInvites)}\``);
 
     message.channel.send(iembed);
 
