@@ -13,14 +13,14 @@ module.exports.run = async (bot, message, args, tools) => {
 
     arraySort(invites, 'uses', { reverse: true });
 
-    let possibleInvites = [['Zaprosił', 'Liczba użyć']];
+    let possibleInvites = [['Zaproszenie', 'Liczba użyć']];
     invites.forEach(function(invite) {
         possibleInvites.push([invite.inviter.username, invite.uses]);
     })
 
     let iembed = new Discord.RichEmbed()
     .setColor(colours.gold)
-    .addField('Tabela Zaproszonych.',`\`\`${table.table(possibleInvites)}\`\``);
+    .addField('Tabela Zaproszeń.',`\`\`${table.table(possibleInvites)}\`\``);
 
     message.channel.send(iembed);
 
@@ -28,5 +28,5 @@ module.exports.run = async (bot, message, args, tools) => {
 
 module.exports.config = {
     name: "invites",
-    aliases: ["inv", "zapr"]
+    aliases: ["inv", "zap"]
 }
