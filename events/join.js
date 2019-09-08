@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 const colours = require("../colours.json");
 
 module.exports = bot => {
-    const channel = member.guild.channels.find("name", "👋powitalnia");
+    const channel = member.guild.channels.find("👋powitalnia");
     if (!channel) console.log("Ten kanał nie istnieje");
 
     var joinMessage = new discord.RichEmbed()
