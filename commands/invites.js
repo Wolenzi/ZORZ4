@@ -1,5 +1,5 @@
-const Discord = require("discord.js");
-const colours = require("../colours.json");
+const Discord = require("discord.js"),
+const colours = require("../colours.json"),
     arraySort = require('array-sort'),
     table = require('table'),
     send = require('quick.hook');
@@ -20,7 +20,6 @@ module.exports.run = async (bot, message, args, tools) => {
 
     const embed = new Discord.MessageEmbed()
         .setColor(colours.gold)
-        .setTitle('Server Invites')
         .addField('TOP', `\`\`\`${table.table(possibleInvites)}\`\`\``);
     send(message.channel, embed, {
         name: 'Serwer Invites'
