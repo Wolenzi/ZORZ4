@@ -6,9 +6,9 @@ module.exports = bot => {
     //bot.user.setActivity("TERRARIUM", {type: "STREAMING", url:"https://www.twitch.tv/wolzi_"});
 
     let statues = [
-        `Jestem na ${bot.guilds.size} serwerach!`,
+        `${bot.guilds.size} serwery!`,
         "w!siema",
-        `Ponad ${bot.users.size} użytkowników!`
+        `${bot.users.size} użytkowników!`
     ]
 
     setInterval(function() {
