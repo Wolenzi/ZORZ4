@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-{}
-=======
 const Discord = require("discord.js");
 const colours = require("../colours.json");
     arraySort = require('array-sort'),
@@ -33,4 +30,3 @@ module.exports.config = {
     name: "invites",
     aliases: ["in", "zap"]
 }
->>>>>>> parent of d7387ac (Update invites.js)
