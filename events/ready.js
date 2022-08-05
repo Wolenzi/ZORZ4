@@ -6,7 +6,7 @@ module.exports = bot => {
     //bot.user.setActivity("TERRARIUM", {type: "STREAMING", url:"https://www.twitch.tv/wolzi_"});
 
     let statues = [
-        `${bot.guilds.size} serwery!`,
+        `TERRARIUM`,
         "w!siema",
         `${bot.users.size} użytkowników!`
     ]
